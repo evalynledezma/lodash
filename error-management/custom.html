@@ -11,7 +11,7 @@
     class DevcampError extends Error {
       constructor(msg = 'An error occurred', ...params) {
         super(...params);
-
+        this.name = 
         this.msg = msg;
       }
     }
