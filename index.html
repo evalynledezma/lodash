@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Lodash Demo</title>
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
-  </head>
-  <body>
-  </body>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
   <script>
+    function siteComponent(func) {
+      return func();
+    }
 
-    const links = [
-      "https://google.com",
-      "https://devcamp.com",
-      "https://airbnb.com"
-    ];
+    widget = () => {
+      return '<div>Hi there</div>';
+    }
 
-    const webLinks = _.reduce(links, function(content, link) {
-      return `<a href='${link}'>${link}</a><br>`.concat(content);
-    }, '');
-
-    console.log(webLinks);
+    try {
+      console.log(siteComponent(widget));
+    } catch(e) {
+      console.log('An error occurred with the siteComponent', e);
+    }
   </script>
+</body>
 </html>
