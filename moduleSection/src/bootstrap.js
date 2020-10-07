@@ -1,11 +1,5 @@
-// How to Import Multiple Elements from a JavaScript File
-// import * as helper  from './helper';
+import moment from 'moment';
 
-// console.log(helper.greeting);
-// console.log(helper.multiply(5, 6));
+const birthday = moment ('2001-01-23', 'YYYY-MM-DD');
 
-
-// Guide to Default Exports in JavaScript
-import navigation, { greeting, multiply} from './navigation';
-
-console.log(greeting);
+console.log(birthday.fromNow());
